@@ -10,19 +10,63 @@
   src: local(".SFNSText"), local(".HelveticaNeueDeskInterface"), local(".LucidaGrandeUI"), local("Ubuntu"), local("Segoe UI"), local("Roboto"), local("DroidSans"), local("Tahoma");
 }
 
+:root {
+	--calm: #d1edfd;
+
+	--positive: #0074C7;
+	--positive-text: #111;
+	--positive-dark: #001524;
+
+	--balanced: #008833;
+
+	--bright: #FAFAFA;
+	--neutral: #e8e8e8;
+	--dim: #727272;
+
+	--text-light: #FAFAFA;
+	--text-dark: #111;
+	--text-neutral: #e8e8e8;
+
+	--info-light: #0a1d46db;
+	--info-dark: #080a24db;
+
+	--okay-light: #008833db; 
+	--okay-dark: #119944db;
+}
+
 body, html {
     width: 100vw;
     min-height: 100%;
     overflow-x: hidden;
-    background-color: #FFF;
-    color: #111;
+    background-color: var(--neutral);
+    color: var(--text-dark);
     font-family: "system", sans-serif;
     font-weight: 400;
     font-size: 14pt;
     line-height: 1.4;
 }
 
-header, main, footer {
+header {
+	width: 100vw;
+	height: 30vh;
+	border-bottom: 5px solid var(--positive);
+	background: var(--bright);
+	color: var(--text-dark);
+
+	display: flex;
+	flex-flow: column;
+
+	align-items: center;
+	justify-content: center;
+}
+
+.github-button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+main, footer {
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 0.3em;
@@ -59,16 +103,11 @@ figure figcaption {
 }
 
 section {
-	border: 1px solid rgba(11, 11, 11, .25);
+	border: 1px solid var(--dim);
 	border-radius: 3px;
 	padding: 1em;
 	margin: 1em auto;
-}
-
-h3 {
-	font-weight: bold;
-	width: 100%;
-	margin: 1em 0 0.3em 0;
+	background: var(--bright);
 }
 
 input, button {
@@ -110,6 +149,7 @@ button {
   border-style: solid;
   padding: 0.3em 1em;
   min-height: 18pt;
+  color: var(--text-light);
 }
 
 .snackbar {
@@ -117,7 +157,9 @@ button {
 }
 
 .snackbar-okay::before, .snackbar-warn::before, .snackbar-fail::before, .snackbar-info::before,
-.alert-okay::before, .alert-warn::before, .alert-fail::before, .alert-info::before {
+.snackbar-okay-light::before, .snackbar-warn-light::before, .snackbar-fail-light::before, .snackbar-info-light::before,
+.alert-okay::before, .alert-warn::before, .alert-fail::before, .alert-info::before,
+.alert-okay-light::before, .alert-warn-light::before, .alert-fail-light::before, .alert-info-light::before {
   font-family: "Ionicons";
   font-weight: 900;
   display: flex;
@@ -126,18 +168,18 @@ button {
   height: 18pt;
 }
 
-.snackbar-info, .alert-info { background-color: #0a1d4622; border-color: #0a1d46; }
-.snackbar-okay, .alert-okay { background-color: #00883422; border-color: #008833; }
+.snackbar-info, .alert-info { background-color: var(--info-light); border-color: var(--info-dark); }
+.snackbar-okay, .alert-okay { background-color: var(--okay-light); border-color: var(--okay-dark); }
 .snackbar-warn, .alert-warn { background-color: #f19b0122; border-color: #f19b01; } 
 .snackbar-fail, .alert-fail { background-color: #dd003322; border-color: #dd0033; } 
 
 .snackbar-info:before, .alert-info:before {
   content: "\f142";
-  color: #0a1d46;
+  color: var(--text-light);
 } 
 .snackbar-okay:before, .alert-okay:before {
   content: "\f375";
-  color: #008833;
+  color: var(--text-light);
 } 
 .snackbar-warn:before, .alert-warn:before {
   content: "\f100";
@@ -146,6 +188,11 @@ button {
 .snackbar-fail:before, .alert-fail:before {
   content: "\f2a4";
   color: #dd0033;
+} 
+
+.snackbar-info-light:before, .alert-info-light:before {
+  content: "\f142";
+  color: var(--info-dark);
 } 
 
 .alert {
@@ -187,9 +234,28 @@ button {
   color: #FFF;
 } 
 
-.info { color: #0a1d46; }
-.okay { color: #008833; }
+.info { color: var(--info-dark); }
+.okay { color: var(--okay-light); }
 .warn { color: #f19b01; }
 .fail { color: #dd0033; }
+
+.grid { display: grid; }
+.grid.col-1 { grid-template-columns: 1fr; }
+.grid.col-2 { grid-template-columns: 1fr 1fr; }
+.grid.col-3 { grid-template-columns: 1fr 1fr 1fr; }
+.grid .col-fill { grid-column: 1/-1; }
+.grid.gap-4 { grid-column-gap: 8px; grid-row-gap: 8px; }
+
+.flex { display: flex; }
+.flex.flow-col { flex-flow: column; }
+.flex.flow-row { flex-flow: row; }
+.flex.flow-row-wrap { flex-flow: wrap row; }
+
+.align-start { align-items: start; }
+.align-center { align-items: center; }
+.align-end { align-items: end; }
+.justify-center { justify-content: center; }
+
+.text-center { text-align: center; }
 
 .hid  { display: none !important; }
