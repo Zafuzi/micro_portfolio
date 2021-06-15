@@ -1,9 +1,4 @@
 var templates = {
-	login: null,
-	loginButton: null,
-	logoutButton: null,
-	register: null,
-	sid: null
 }
 
 var SID;
@@ -21,13 +16,6 @@ document.addEventListener("DOMContentLoaded", dcl => {
 	if( ! qd.page ) jmp("/?page=home");
 	Nav(qd, data => {
 		SID = localStorage.getItem("sid")
-		if( SID ) {
-			templates.loginButton.update([]);
-			templates.logoutButton.update([{sid: SID}]);
-		} else {
-			templates.loginButton.update([{sid: SID}]);
-			templates.logoutButton.update([]);
-		}
 		document.body.style.opacity = 0;
 
 		// wait until opacity setting above is done local.css defines as 300ms
@@ -52,7 +40,6 @@ document.addEventListener("DOMContentLoaded", dcl => {
 });
 
 function nav_home(cb) {
-	templates.sid.update([{sid: SID || null}]);
 	cb();
 }
 

@@ -5,60 +5,75 @@
   		<meta name=viewport content="width=device-width, initial-scale=1.0">
 		<title>Micro</title>
 		<link href="local.css" rel="stylesheet">
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<script>
+		  (function (w,d,s,o,f,js,fjs) {
+		  w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+		  js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+		  js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+		  }(window, document, 'script', 'plausible', 'https://plausible.io/js/p.js'));
+
+		  plausible('page')
+		</script>
 	</head>
 	<body>
 
 		<header>
-			<nav>
-				<h1><a href="/?page=home">Micro Server</a></h1>
-				<r8 name="loginButton">
-					<a href="/?page=login">Login</a>
-				</r8>
-				<r8 name="logoutButton">
-					<a href="/?page=logout">Logout</a>
-				</r8>
-			</nav>
+			<h1> Zachary Foutz </h1>
+			<b> Software Alchemist </b>
+			<br/>
+			<div class="grid col-1 gap-4 align-center justify-center text-center">
+				<a href="mailto:zacharyfoutz@gmail.com">zacharyfoutz@gmail.com</a>
+				<p class="flex flow-col align-center justify-center">
+					<a class="github-button" style="margin: 0 auto;" href="https://github.com/zafuzi" data-size="large" data-show-count="true" aria-label="Follow @zafuzi on GitHub">@zafuzi on Github</a>
+				</p>
+			</div>
 		</header>
 		<main>
-			<section class="page" id="page_login">
-				<r8 name="login">
-					<form id="login_form">
-						<h2>Login</h2>
-						<span class="fail">__error__</span>
-						<input type="text" name="username" placeholder="username or email" required autocomplete/>
-						<input type="password" name="password" placeholder="password" required autocomplete/>
-						<button>Login</button>
-						<p>
-							Need an account?
-							<a href="/?page=register">Register</a>
-						</p>
-					</form>
-				</r8>
-			</section>
-
-			<section class="page" id="page_register">
-				<r8 name="register">
-					<form id="register_form">
-						<h2>Register</h2>
-						<span class="fail">__error__</span>
-						<input type="text" name="username" placeholder="username or email" required autocomplete/>
-						<input type="password" name="password" placeholder="password" required autocomplete/>
-						<button>Register</button>
-						<p>
-							Already have an account?
-							<a href="/?page=login">Login</a>
-						</p>
-					</form>
-				</r8>
-			</section>
-
 			<div class="page" id="page_home">
-				<r8 name="sid">
-					SID: __sid__
-				</r8>
-				<p class="snackbar snackbar-okay">Connected</p>
-				<p class="snackbar snackbar-info">Edit api/index.js to add api calls.</p>
-				<p class="snackbar snackbar-info">Edit static/* to edit your public facing app.</p>
+
+				<section>
+					<h2>About Me</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat magna sed dictum egestas. Donec rutrum felis nibh, nec pulvinar est mollis vel. Suspendisse ullamcorper fermentum blandit. Aliquam ultrices leo non dui imperdiet pretium. In laoreet aliquet nisi, eget feugiat velit tincidunt in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet consequat sem non molestie.</p>
+				</section>
+
+				<section>
+					<h2>Work History</h2>
+					
+					<br/>
+					<a href="#">Boom Learning Inc.</a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat magna sed dictum egestas. Donec rutrum felis nibh, nec pulvinar est mollis vel. Suspendisse ullamcorper fermentum blandit. Aliquam ultrices leo non dui imperdiet pretium. In laoreet aliquet nisi, eget feugiat velit tincidunt in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet consequat sem non molestie.</p>
+
+					<br/>
+					<a href="#">Sleepless Inc.</a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat magna sed dictum egestas. Donec rutrum felis nibh, nec pulvinar est mollis vel. Suspendisse ullamcorper fermentum blandit. Aliquam ultrices leo non dui imperdiet pretium. In laoreet aliquet nisi, eget feugiat velit tincidunt in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet consequat sem non molestie.</p>
+				</section>
+
+				<section>
+					<h2>Projects</h2>
+					<div class="grid col-2 gap-4 align-start">
+						<figure>
+							<img src="https://picsum.photos/300/300">
+							<figcaption>Image</figcaption>
+						</figure>
+						<div class="flex flow-col">
+							<h3>Micro Server</h3>
+							<a href="#">https://google.com</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat magna sed dictum egestas. Donec rutrum felis nibh, nec pulvinar est mollis vel. Suspendisse ullamcorper fermentum blandit. Aliquam ultrices leo non dui imperdiet pretium. In laoreet aliquet nisi, eget feugiat velit tincidunt in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet consequat sem non molestie.<p>
+						</div>
+					</div>
+					<div class="grid col-2 gap-4 align-start">
+						<figure>
+							<img src="https://picsum.photos/300/300">
+							<figcaption>Image</figcaption>
+						</figure>
+						<div class="flex flow-col">
+							<h3>moistboat</h3>
+							<a href="#">https://moistboat.com</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat magna sed dictum egestas. Donec rutrum felis nibh, nec pulvinar est mollis vel. Suspendisse ullamcorper fermentum blandit. Aliquam ultrices leo non dui imperdiet pretium. In laoreet aliquet nisi, eget feugiat velit tincidunt in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin aliquet consequat sem non molestie.<p>
+						</div>
+					</div>
+				</section>
 			</div>
 		</main>
 
