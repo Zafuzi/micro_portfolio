@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+  		<meta name=viewport content="width=device-width, initial-scale=1.0">
+		<title>Micro</title>
+		<link href="local.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+			<nav>
+				<h1><a href="/?page=home">Micro Server</a></h1>
+				<r8 name="loginButton">
+					<a href="/?page=login">Login</a>
+				</r8>
+				<r8 name="logoutButton">
+					<a href="/?page=logout">Logout</a>
+				</r8>
+			</nav>
+		</header>
+		<main>
+			<section class="page" id="page_login">
+				<r8 name="login">
+					<form id="login_form">
+						<h2>Login</h2>
+						<span class="fail">__error__</span>
+						<input type="text" name="username" placeholder="username or email" required autocomplete/>
+						<input type="password" name="password" placeholder="password" required autocomplete/>
+						<button>Login</button>
+						<p>
+							Need an account?
+							<a href="/?page=register">Register</a>
+						</p>
+					</form>
+				</r8>
+			</section>
+
+			<section class="page" id="page_register">
+				<r8 name="register">
+					<form id="register_form">
+						<h2>Register</h2>
+						<span class="fail">__error__</span>
+						<input type="text" name="username" placeholder="username or email" required autocomplete/>
+						<input type="password" name="password" placeholder="password" required autocomplete/>
+						<button>Register</button>
+						<p>
+							Already have an account?
+							<a href="/?page=login">Login</a>
+						</p>
+					</form>
+				</r8>
+			</section>
+
+			<div class="page" id="page_home">
+				<r8 name="sid">
+					SID: __sid__
+				</r8>
+				<p class="snackbar snackbar-okay">Connected</p>
+				<p class="snackbar snackbar-info">Edit api/index.js to add api calls.</p>
+				<p class="snackbar snackbar-info">Edit static/* to edit your public facing app.</p>
+			</div>
+		</main>
+
+		<script src="sleepless.js"></script>
+		<script src="lib.js"></script>
+		<script src="local.js" defer></script>
+	</body>
+</html>
+
